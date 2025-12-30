@@ -74,7 +74,7 @@ if st.button("Generate"):
             "cta": data.get("ctas", [cta])[i] if i < len(data.get("ctas", [])) else cta,
         })
     df = pd.DataFrame(df_rows)
-    st.dataframe(df, use_container_width=True)
+    st.dataframe(df, width='stretch')
 
     if include_lp:
         lp_prompt = f"""            Create landing page sections for the same campaign.
